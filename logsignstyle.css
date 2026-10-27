@@ -22,14 +22,17 @@ body {
     height: 40%;
     width: 20%;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #b5c4d0;
     border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
     
     
     
 }
 
 #logsignbox input {
+    border: 1px solid black;
     padding: 8px 12px;
     border-radius: 10px;
     margin: 20px;
