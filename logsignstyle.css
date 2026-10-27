@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    background-color: white;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+
+}
+
+.mainBody {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logsignbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    width: 20%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    
+    
+    
+}
+
+#logsignbox input {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-block: 5px;
+}
+
+

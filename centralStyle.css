@@ -1,0 +1,90 @@
+
+button, a {
+    box-sizing: border-box;
+    min-width: fit-content;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #222222;
+    font: inherit;
+    text-decoration: none;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #b5c4d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-top: 5px solid #b5c4d0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
+    overflow-x:auto;
+    gap: 16px;
+    
+}
+.div-in-navbar {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 80%;
+    gap: 16px;
+}
+
+.div-in-navbar-2 {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 80%;
+    gap: 16px;
+}
+
+.div-in-navbar h1 {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.div-in-navbar select,
+.div-in-navbar a,
+.div-in-navbar button {
+    box-sizing: border-box;
+    min-width: fit-content;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #222222;
+    font: inherit;
+    text-decoration: none;
+}
+
+#searchBar {
+    align-self: center;
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin: 0;
+    font: inherit;
+}
+
+#productSelector,
+#searchBar {
+    padding-left: clamp(0rem, 8px, 1rem);
+    white-space: nowrap;
+    
+    text-overflow: ellipsis;
+    min-width: 20px;
+}

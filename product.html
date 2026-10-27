@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Timicity</title>
+            <link rel="stylesheet" href="centralStyle.css">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="itemPageStyle.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+        </head>
+        <body>
+            <nav class="navbar" aria-label="Primary navigation">
+                <div class="div-in-navbar">
+                    <h1 id="pageTitle"><b>TIMICITY </b></h1>
+                    <select id="ProductSelector" aria-label="Select a product">
+                        <option value="" selected disabled>Our products</option>
+                        <option value="candyMachine.html">Candy Machines</option>
+                        <option value="VrMachine.html">VR Machines</option>
+                        <option value="massageMachine.html">Massage Machines</option>
+                    </select>
+                    
+                    <!-- <button id = 'login'>Login</button>
+                    <button id = 'signUp'>Sign Up</button>
+                    <input id="searchBar" type="text" placeholder="⌕ Search..."> -->
+                </div>
+                <div class="div-in-navbar-2">
+                    <a id = 'aboutus'href="aboutUs.html">About Us</a>
+                    <button id = 'login'>Login</button>
+                    <button id = 'signUp'>Sign Up</button>
+
+                </div>
+            </nav>
+            <div id="3imagesContainer">
+                <img id='mainImage' src="./Imagees/blank.jpg" alt="Candy machine placeholder">
+            </div>
+            <div id="mainImageCOntainer">
+                <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 1">
+                <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 2">
+                <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 3">
+            </div>
+            <div id="itemDescriptionAddCart">
+                 <!-- <h2 class="itemName"></h2>
+                <p class="itemDescription"></p>
+                <p class="itemPrice"></p>
+                <label for="itemQuantity"></label>
+                 <input type="number" id="itemQuantity" name="quantity" min="1" max="10" step="1" value="1"> -->
+                <div id = paypalContainer></div>
+            </div>
+            <div id="imageVisualiser" class = 'hidden'>
+                <button id="remove">X</button>
+                <img id = "visualiserImage">
+
+            </div>
+            <script src="https://cdn.auth0.com/js/auth0-spa-js/2.28/auth0-spa-js.production.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+            <script src="https://www.paypal.com/sdk/js?client-id=BAACZYxHipQFmX3UKGobhYurLS3AwRaNlavzVWrh_xxRBaOhDPTaRLnDRqxFLk0PXa-wkEIzR0SYsX5nng&amp;components=hosted-buttons&amp;disable-funding=venmo&amp;currency=GBP"></script>
+            <script src="loginscript.js"></script>
+            <script src="supabase.js"></script>
+            <script src="script.js"></script>
+            <script src="productUpdater.js"></script>
+        </body>
+    </html>

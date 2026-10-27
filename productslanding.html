@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Timicity</title>
+            <link rel="stylesheet" href="centralStyle.css">
+            <link rel="stylesheet" href="productStyle.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <nav class="navbar" aria-label="Primary navigation">
+                <div class="div-in-navbar">
+                    <h1 id="pageTitle"><b>TIMICITY </b></h1>
+                    <a id = 'aboutus'href="aboutUs.html">About Us</a>
+                    <!-- <button id = 'login' >Login</button>
+                    <input id="searchBar" type="text" placeholder="⌕ Search..."> -->
+                </div>
+                <div class="div-in-navbar-2">
+                    <button id = 'login'>Login</button>
+                    <button id = 'signUp'>Sign Up</button>
+
+                </div>
+
+            </nav>
+            <div id="productPageContainer">
+            <div id="selectors">
+                <div class = 'selector' id = 'priceSelector'>
+                    <label for="priceRange">Price Range:</label>
+                    <input type="range" id="priceRange" name="priceRange" min="0" max="6000" step="10">
+                    <p id="priceValue">£0</p>
+                </div>
+                <hr>
+                <div class = 'selector' id = 'typeSelector'>
+                   <!-- <input type="checkbox" id="candyMachineBox" name="candyMachineBox">
+                    <label for="candyMachineBox">Candy Machine</label>
+                    <input type="checkbox" id="vrMachineBox" name="vrMachineBox">
+                    <label for="vrMachineBox">VR Machine</label>   
+                    <input type="checkbox" id="massageMachineBox" name="massageMachineBox">
+                    <label for="massageMachineBox">Massage Machine</label>   -->  
+                    
+                    
+                </div>
+            </div>
+                <div id="products">
+                    <!-- <div class='product'>
+                        <img src="./Imagees/blank.jpg" alt="Candy machine">
+                        <h2>Candy Machine</h2>
+
+                    </div>
+                    <div class='product'>
+                        <img src="./Imagees/blank.jpg" alt="Candy machine">
+                        <h2>Candy Machine</h2>
+
+                    </div>
+                    <div class='product'>
+                        <img src="./Imagees/blank.jpg" alt="Candy machine">
+                        <h2>Candy Machine</h2>
+                        
+                    -->
+                    </div>
+
+                </div>
+            </div>
+        </body>
+        <script src="https://cdn.auth0.com/js/auth0-spa-js/2.28/auth0-spa-js.production.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        
+
+        <script src="supabase.js"></script>
+        <script src="landingScript.js"></script>
+        <script src="loginscript.js"></script>
+        
+    </html>

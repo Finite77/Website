@@ -1,0 +1,22 @@
+1. Accessibility — first
+Give the search box an accessible label on home.html and productslanding.html.
+The quantity input’s label is empty in product.html, so screen readers won’t know what it’s for. Add visible label text.
+Product cards are clickable <div> elements created in landingScript.js. They aren’t naturally keyboard-operable; use links or make keyboard interaction work.
+Make the image viewer in product.html usable by keyboard, with a clear accessible name for its close button and a way to close it with Escape.
+Respect reduced-motion preferences for the animated background in style.css.
+2. Make the product page complete
+In productUpdater.js, displaying the product name, description, and price is currently commented out. Restore that before relying on the page as a product detail page. Also check how the quantity input relates to the PayPal purchase button; it currently isn’t connected in the visible code.
+
+3. Fix the advertised links that don’t lead to pages
+home.html links to aboutUs.html and candyMachine.html, but those files aren’t present in the workspace listing. Either create those pages or change/remove the links so visitors don’t hit missing pages.
+
+4. Finish or hide the login and sign-up controls
+The login buttons are shown in the navigation, but loginscript.js is commented out. The sign-up page, signup.html, currently has no submit control or functioning form, and its email/password inputs lack labels. If login isn’t ready yet, consider not presenting it as a working feature.
+
+5. Give users feedback when data doesn’t load
+The product list handles Supabase errors by logging to the console in landingScript.js, but visitors won’t see that. Show a loading state and a visible error or “no products found” message. The detail-page query in productUpdater.js should also handle a missing ID, query error, or missing product.
+
+6. Test the actual shopping flow on small screens
+Check the full journey—from home, through filtering, to product details and checkout—at mobile widths and with keyboard navigation. The layouts have responsive rules, but the complete flow still needs testing
+
+Then, fix the url system, make the navbar less empty, and add a footer and related materials.s

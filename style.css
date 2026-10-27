@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+
+}
+
+
+.mainPage {
+    position: relative;
+    background-image: url("Imagees/blank.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100vh;
+    margin-bottom: 20px;
+}
+.mainPage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        120deg,
+        rgba(30, 100, 220, 0.18),
+        transparent 4%,
+        rgba(100, 180, 255, 0.15)
+    );
+
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 10px solid #ffffff;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    max-width: 33%;
+    justify-content: center;
+
+}
+.card img {
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 90%;
+}
+.card p,
+.card h2
+ {
+    text-align: center;
+    padding: 10px;
+}
+.header {
+    margin-top: 40px;
+    background: #f9f9f9;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+h1 {
+    text-align: center;
+}
+.hook {
+    position: relative;
+    margin-top: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 50%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 10px solid #f9f9f9;
+    border-radius: 20px;
+}
+#productsLink {
+    padding: 8px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #222222;
+    font: inherit;
+    text-decoration: none;
+    margin-bottom: 30px;
+    width: 95%;
+}
+#hookline {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 700;
+}
+
+
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
