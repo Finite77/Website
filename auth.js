@@ -1,7 +1,12 @@
+// placeholder function until i implement the button which replaces login and sign up if youre alr logged in
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('otherPage').addEventListener('click', () => {
         window.location.href = 'login.html'
     })
+    document.getElementById('backHome').addEventListener('click', () => {
+        window.location.href = 'index.html'
+    });
     let username;
     let password;
 
@@ -29,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             document.getElementById('feedbackBox').textContent = 'Yeah idk what happened but there have been some errors.'
         }
+    } else {
+        document.getElementById('feedbackBox').textContent = 'Email sent. Check your email to complete the signup!'
     }
     /*
     if(data.session == null) {

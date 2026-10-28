@@ -19,4 +19,6 @@ The product list handles Supabase errors by logging to the console in landingScr
 6. Test the actual shopping flow on small screens
 Check the full journey—from home, through filtering, to product details and checkout—at mobile widths and with keyboard navigation. The layouts have responsive rules, but the complete flow still needs testing
 
-Then, fix the url system, make the navbar less empty, and add a footer and related materials.s
+Then, fix the url system, make the navbar less empty, and add a footer and related materials.
+
+The login system is now at least partly working. Need to only add the login or signup buttons when the user is not logged in. Also, I need to add a popup for the sake of collecting the user's name. This will aid personalisation and communication.

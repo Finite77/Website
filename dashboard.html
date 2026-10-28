@@ -8,8 +8,27 @@
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
             <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+            <script defer src="supabase.js"></script>
+            <script src="dashboard.js"></script>
+            <script defer src="script.js"></script>
         </head>
         <body>
+            <nav class="navbar" aria-label="Primary navigation">
+                <div class="div-in-navbar">
+                    <h1 id="pageTitle"><b>TIMICITY </b></h1>
+                    <select id="ProductSelector" aria-label="Select a product">
+                        <option value="" selected disabled>Our products</option>
+                        <option value="candyMachine.html">Candy Machines</option>
+                        <option value="VrMachine.html">VR Machines</option>
+                        <option value="massageMachine.html">Massage Machines</option>
+                    </select>
+                    <!-- <input id="searchBar" type="text" placeholder="⌕ Search..."> -->
+                </div>
+                <div class="div-in-navbar-2">
+                    <a id = 'aboutus'href="aboutUs.html">About Us</a>
+                </div>  
+            </nav>
+            <h1>Your Dashboard:</h1>
             
             
             
