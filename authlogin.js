@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     })
     console.log(data); 
-    console.log(error.code);
+    
     if(error) {
+        console.log(error.code);
         if (error.code === 'email_not_confirmed') {
             document.getElementById('feedbackBox').textContent = 'Email has not been confirmed. Please, confirm email to log in.'
         } else if (error.code === 'email_rate_limit_exceeded') {
