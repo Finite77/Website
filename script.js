@@ -8,5 +8,5 @@ document.getElementById("ProductSelector").addEventListener("change", function()
 });
 
 document.getElementById('pageTitle').addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });

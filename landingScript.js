@@ -20,7 +20,7 @@ document.getElementById('priceRange').addEventListener('input', () => {
     
 });
 document.getElementById('pageTitle').addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 async function loadCheckboxes() {
