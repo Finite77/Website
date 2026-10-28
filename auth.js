@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.getElementById('feedbackBox').textContent = '';
-
-    console.log(data);
-    console.log(error.code);
+    
     if(error) {
+        console.log(error.code);
         if (error.code === 'email_not_confirmed') {
             document.getElementById('feedbackBox').textContent = 'Email has not been confirmed. Please, confirm email to log in.'
         } else if (error.code === 'email_rate_limit_exceeded') {
@@ -27,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('feedbackBox').textContent = 'Password is too weak! For best results, make the password at least 8 characters long.'
         } else if (error.code === 'validation_failed') {
             document.getElementById('feedbackBox').textContent = 'Invalid email/ password! Try again.'
+        } else {
+            document.getElementById('feedbackBox').textContent = 'Yeah idk what happened but there have been some errors.'
         }
     }
     /*
