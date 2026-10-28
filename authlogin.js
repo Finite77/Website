@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('otherPage').addEventListener('click', () => {
+        window.location.href = 'signup.html'
+    })
     let username;
     let password;
 
