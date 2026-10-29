@@ -1,4 +1,9 @@
-
+body{
+    background-image: url('./Imagees/Minimalist Geometric Wireframe Network-transparent(1).png');
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 button, a {
     box-sizing: border-box;
     min-width: fit-content;
@@ -17,7 +22,7 @@ button, a {
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: #b5c4d0;
+    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +30,7 @@ button, a {
     border-top: 5px solid #b5c4d0;
     padding-bottom: 5px;
     border-bottom: 1px solid black;
-    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2); */
     overflow-x:auto;
     gap: 16px;
     
