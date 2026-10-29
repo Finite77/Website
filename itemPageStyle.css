@@ -72,7 +72,7 @@ body {
     object-fit: contain;
     border-radius: 20px;
     border: 1px solid black;
-
+    box-sizing: border-box;
 }
 
 #threeImageContainer {
