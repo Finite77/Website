@@ -39,21 +39,29 @@
 
                 </div>
             </nav>
-            <div id="3imagesContainer">
+            <div id="mainImageContainer">
                 <img id='mainImage' src="./Imagees/blank.jpg" alt="Candy machine placeholder">
             </div>
-            <div id="mainImageCOntainer">
+            <div id="threeImageContainer">
                 <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 1">
                 <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 2">
                 <img src="./Imagees/blank.jpg" alt="Candy machine placeholder view 3">
             </div>
             <div id="itemDescriptionAddCart">
+                <h1 class="paymentLabel">Pay with paypal:</h1>
+                <div id = paypalContainer></div>
+                <h1 class="paymentLabel">or add to cart:</h1>
+                <div id="cartButtons">
+                <input id="numberToBasket" type="number" min="1" max="10" value="1">
+                <button id="addToBasket">Add To Cart</button>
+                </div>
+                
                  <!-- <h2 class="itemName"></h2>
                 <p class="itemDescription"></p>
                 <p class="itemPrice"></p>
                 <label for="itemQuantity"></label>
                  <input type="number" id="itemQuantity" name="quantity" min="1" max="10" step="1" value="1"> -->
-                <div id = paypalContainer></div>
+                
             </div>
             <div id="imageVisualiser" class = 'hidden'>
                 <button id="remove">X</button>

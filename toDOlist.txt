@@ -10,8 +10,7 @@ In productUpdater.js, displaying the product name, description, and price is cur
 3. Fix the advertised links that don’t lead to pages
 home.html links to aboutUs.html and candyMachine.html, but those files aren’t present in the workspace listing. Either create those pages or change/remove the links so visitors don’t hit missing pages.
 
-4. Finish or hide the login and sign-up controls
-The login buttons are shown in the navigation, but loginscript.js is commented out. The sign-up page, signup.html, currently has no submit control or functioning form, and its email/password inputs lack labels. If login isn’t ready yet, consider not presenting it as a working feature.
+4 is in progress. (To work login so it is a workng feature.)
 
 5. Give users feedback when data doesn’t load
 The product list handles Supabase errors by logging to the console in landingScript.js, but visitors won’t see that. Show a loading state and a visible error or “no products found” message. The detail-page query in productUpdater.js should also handle a missing ID, query error, or missing product.
@@ -22,3 +21,10 @@ Check the full journey—from home, through filtering, to product details and ch
 Then, fix the url system, make the navbar less empty, and add a footer and related materials.
 
 The login system is now at least partly working. Need to only add the login or signup buttons when the user is not logged in. Also, I need to add a popup for the sake of collecting the user's name. This will aid personalisation and communication.
+Additionally, each image in the individual product page needs shadows and underlines.
+
+Also, the email sent to the users to sign up needs to be customised, and the footer on the mobile versions needs to be reconfigured.
+
+In addition, the password field needs to be doubled for confirmation purposes.
+
+As well as this, the entirety of the logged-in interface must be done.

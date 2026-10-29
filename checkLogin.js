@@ -6,9 +6,9 @@ async function checkloggedInAndDoStuff() {
     const {data, error} = await window.supabaseClient.auth.getSession();
     if(data.session) {
         let dashboardButton = document.createElement('button')
-        dashboardButton.textContent = 'Dashboard';
+        dashboardButton.textContent = 'Basket';
         dashboardButton.addEventListener('click', () => {
-            window.location.href = 'dashboard.html'
+            window.location.href = 'basket.html'
         })
         document.querySelector('.div-in-navbar-2').appendChild(dashboardButton);
 
