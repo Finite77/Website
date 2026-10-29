@@ -19,9 +19,11 @@ body {
     background: rgba( 0, 0, 0, 0.8);
     position: fixed;
     left: 0;
+    display: flex;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 0px;
     z-index: 9999;
@@ -46,8 +48,7 @@ body {
 
 #visualiserImage {
     position: absolute;
-    left: 30%;
-    height: 90vh;
+    max-width: 90vw;
     max-height: 90vh;
 }
 
@@ -103,9 +104,10 @@ body {
     box-sizing: border-box;
     min-height: 420px;
     padding: 32px;
-    width: 93%;
+    width: 91%;
     border-radius: 20px;
     background-color: #f9f9f9;
+    height: 100%;
 }
 
 .itemName {
@@ -125,9 +127,6 @@ body {
     font-weight: 600;
 }
 
-
-
-
 #cartButtons {
     display: flex;
     flex-direction: column;
@@ -135,9 +134,16 @@ body {
     gap: 16px;
 }
 
+#remove {
+    z-index: 99999;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 #paypalContainer, #cartButtons {
     width: 93%;
-    padding: 16px;
+    padding: 12px;
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -190,6 +196,7 @@ body {
         height: auto;
         aspect-ratio: 1.2;
     }
+    
 
     #itemDescriptionAddCart {
         grid-row: auto;
