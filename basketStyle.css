@@ -1,0 +1,112 @@
+body {
+    height: 100vh;
+    background-color: white;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 220px;
+    margin: 0;
+    padding: 20px;
+    gap: 24px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.pageContent {
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+}
+#BasketContainer {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 30px;
+}
+
+.section1 {
+    display: flex;
+    flex: 1 1 270px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.section1 img {
+    border: 1px solid black;
+    width: 100%;
+    min-height: 80px;
+    max-height: 240px;
+    border-radius: 10px;
+}
+
+.section2 {
+    display: flex;
+    flex: 1 1 340px;
+    flex-direction: column;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.section3 {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: #f9f9f9;
+    min-width: 0px;
+    box-sizing: border-box;
+    align-self: flex-end;
+}
+
+.section3 button, input {
+    overflow: hidden;
+    min-width: 50px;
+    margin-top: 20px;
+    max-width: 100%;
+    padding: 8px 12px;
+    color: black;
+    text-align: center;
+}
+
+#leftOfPage {
+    width: 70%;
+}
+
+#rightOfPage {
+    width: 30%;
+}
+#titleHeader {
+    width: 70%;
+}
+
+#subtotalInfo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    border-left: 1px solid black;
+}

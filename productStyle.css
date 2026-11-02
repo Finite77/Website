@@ -45,7 +45,7 @@ body {
     box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.product > div:first-child {
+.section1 {
     display: flex;
     flex: 0 0 40%;
     align-items: center;
@@ -53,7 +53,7 @@ body {
 
 
 
-.product > div:first-child img {
+.section1 img {
     display: block;
     width: 100%;
     max-height: 240px;
@@ -62,11 +62,12 @@ body {
     border: 1px solid black;
 }
 
-.product > div:last-child {
+.section2 {
     display: flex;
     flex: 1;
     flex-direction: column;
     min-width: 0;
+    width: fit-content;
 }
 
 .selector {
@@ -128,7 +129,7 @@ body {
         align-items: stretch;
     }
 
-    .product > div:first-child {
+    .section1 {
         flex-basis: auto;
     }
 }

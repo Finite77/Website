@@ -94,7 +94,7 @@ async function loadProducts(selectors = selectedProducts) {
         section1.classList.add('section1');
         card.appendChild(section1);
         let section2 = document.createElement('div');
-        section1.classList.add('section2');
+        section2.classList.add('section2');
         card.appendChild(section2);
         
         card.classList.add('product');

@@ -28,3 +28,5 @@ Also, the email sent to the users to sign up needs to be customised, and the foo
 In addition, the password field needs to be doubled for confirmation purposes.
 
 As well as this, the entirety of the logged-in interface must be done.
+
+Text twist with Bible names, places, etc....

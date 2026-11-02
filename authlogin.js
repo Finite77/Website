@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('feedbackBox').textContent = 'Unable to log in. Please check your email and password and try again.'
         }
     } else if (data.session) {
-        window.location.href = 'products.html';
-        alert('You can now add items  to your basket!');
+        window.location.href = 'productslanding.html';
+        alert('You can now add items to your basket!');
     } else {
         document.getElementById('feedbackBox').textContent = 'Could not start a session. Please try again.'
     }

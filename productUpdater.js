@@ -1,5 +1,5 @@
 async function updateProductPage() {
-    const id = window.location.href.split('id=')[1]
+    const id = new URLSearchParams(window.location.search).get('id')
     const {data , error} = await window.supabaseClient
     .from('Products')
     .select('*')

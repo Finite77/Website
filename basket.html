@@ -2,7 +2,9 @@
     <html>
         <head>
             <link rel="stylesheet" href="centralStyle.css">
-            <link rel="stylesheet" href="style.css">
+            <!-- Css stolen from the product page be like:-->
+            
+            <link rel="stylesheet" href="basketStyle.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,9 +31,19 @@
                     <a id = 'aboutus'href="aboutUs.html">About Us</a>
                 </div>  
             </nav>
-            <h1>Your Basket:</h1>
-            
-            
+            <div class="pageContent">
+                <div id="leftOfPage">
+                    <div id="titleHeader">
+                        <h1>Your Basket:</h1>
+                    </div>
+                    <div id="BasketContainer">
+                        <h1>Your basket is empty....</h1>
+                    </div>
+                </div>
+                <div id="rightOfPage">
+                    <div id="subtotalInfo"></div>
+                </div>
+            </div>
             
         </body>
     </html>
