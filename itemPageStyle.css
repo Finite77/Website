@@ -163,6 +163,16 @@ body {
     font: inherit;
 }
 
+#addToBasket {
+    transition: background-color 0.5s ease;
+    transition-delay: 4s;
+}
+
+#addToBasket:active {
+    transition: none;
+    background-color: green;
+}
+
 @media (max-width: 760px) {
     body {
         grid-template-columns: minmax(0, 1fr);

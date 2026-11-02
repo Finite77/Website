@@ -27,6 +27,8 @@ button:hover, a:hover, input:hover, select:hover {
 button:active, a:active, input:active, select:active {
     transform: translateY(2px);   
     box-shadow: none;
+    background-color: lightgray;
+    
 }
 
 .navbar{

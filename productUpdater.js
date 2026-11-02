@@ -9,6 +9,15 @@ async function updateProductPage() {
     console.log(data);
 
     document.getElementById('mainImage').src = data.product_image1_path;
+    if(data.product_image2_path) {
+        document.getElementById('secondImage').src = data.product_image2_path;
+    }
+    if(data.product_image3_path) {
+        document.getElementById('thirdImage').src = data.product_image3_path;
+    }
+    if(data.product_image4_path) {
+        document.getElementById('fourthImage').src = data.product_image4_path;
+    }
     /* document.querySelector('.itemName').textContent = data.product_name;
     document.querySelector('.itemDescription').textContent = data.product_description;
     document.querySelector('.itemPrice').textContent = '£' + data.product_price; */

@@ -1,9 +1,26 @@
-document.getElementById('numberToBasket').addEventListener('input', () => {
-    if (document.getElementById('numberToBasket').value > 10) {
-        document.getElementById('numberToBasket').value = 10;
-    }
-})
+async function checkInput() {
+    let item = new URLSearchParams(window.location.search).get('id');
 
+    const {data, error} = await window.supabaseClient
+    .from('Products')
+    .select('product_stock')
+    .eq('id', item)
+    .maybeSingle();
+
+    document.getElementById('numberToBasket').addEventListener('input', () => {
+        if (document.getElementById('numberToBasket').value > data.product_stock) {
+            document.getElementById('numberToBasket').value = 1 + data.product_stock;
+            document.getElementById('numberToBasket').style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.getElementById('numberToBasket').style.backgroundColor = 'white';
+                document.getElementById('numberToBasket').value = data.product_stock;
+            }, 200);
+        }
+    })
+    
+}
+    
+checkInput();
 async function checkBasketValues(itemId){
     const {data, error: loginError} = await window.supabaseClient.auth.getUser();
     const {data: basketItem, error} = await window.supabaseClient

@@ -159,7 +159,7 @@ async function displayBasket() {
 
         })
     } else {
-        document.getElementById('BasketContainer').innerHTML = '<a href="productsLanding.html"><h1>Your basket is empty....     Shop Now!</h1></a>';
+        document.getElementById('BasketContainer').innerHTML = '<a href="productslanding.html"><h1>Your basket is empty....     Shop Now!</h1></a>';
     }
 }
 
