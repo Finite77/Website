@@ -36,10 +36,17 @@ async function updateProductPage() {
 }
 
 document.querySelectorAll('img').forEach(image => {
+    image.tabIndex = 0;
     image.addEventListener('click' , () => {
         document.getElementById('imageVisualiser').classList.remove('hidden');
         document.getElementById('visualiserImage').src = image.src;
     });
+
+    image.addEventListener('keydown', (a) => {
+        if((a.key === 'Enter') || (a.key === ' ')) {
+            image.click();               
+        }
+    })
     document.getElementById('remove').addEventListener('click', () => {
         document.getElementById('imageVisualiser').classList.add('hidden');
     });

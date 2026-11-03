@@ -90,6 +90,7 @@ async function loadProducts(selectors = selectedProducts) {
     if ((selectors.includes(product.product_category) || selectors.length === 0) &&
         (Number(product.product_price) <= pagePrice)) {
         let card = document.createElement('div');
+        card.tabIndex = 0;
         let section1 = document.createElement('div');
         section1.classList.add('section1');
         card.appendChild(section1);
@@ -102,6 +103,12 @@ async function loadProducts(selectors = selectedProducts) {
         
         card.addEventListener('click', function () {
             window.location.href = `product.html?id=${product.id}`;
+        });
+
+        card.addEventListener('keydown', function (a) {
+            if((a.key === 'Enter') || (a.key === ' ')) {
+                card.click();               
+            }
         });
         
         if (product.product_image1_path) {

@@ -101,7 +101,15 @@ async function displayBasket() {
                     })
                     .eq('user_id', user.user.id)
                     .eq('product_id', array[1].id)
-
+                let stockOfItems = array[1].product_stock;
+                if (newNumber > stockOfItems) {
+                    productQuantity.value = 1 + array[1].product_stock;
+                    productQuantity.style.backgroundColor = 'red';
+                    setTimeout(() => {
+                        productQuantity.style.backgroundColor = 'white';
+                        productQuantity.value = array[1].product_stock;
+                    }, 200);
+                }
 
                 if (error) {
                     console.error(error);
@@ -154,7 +162,29 @@ async function displayBasket() {
                 await displayBasket();
             });
             section3.appendChild(removeButton);
+            async function checkInput() {
+                
+
+                const {data, error} = await window.supabaseClient
+                .from('Products')
+                .select('product_stock')
+                .eq('id', item)
+                .maybeSingle();
+
+                document.getElementById('numberToBasket').addEventListener('input', () => {
+                    if (document.getElementById('numberToBasket').value > data.product_stock) {
+                        document.getElementById('numberToBasket').value = 1 + data.product_stock;
+                        document.getElementById('numberToBasket').style.backgroundColor = 'red';
+                        setTimeout(() => {
+                            document.getElementById('numberToBasket').style.backgroundColor = 'white';
+                            document.getElementById('numberToBasket').value = data.product_stock;
+                        }, 200);
+                    }
+                })
+                
+            }
             
+            checkInput();
             
 
         })
