@@ -16,6 +16,7 @@ body {
     align-items: top;
     height: 100vh;
     margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 .mainPage::before {
     content: "";
@@ -43,15 +44,15 @@ body {
 }
 
 .card {
-
+    border: 1px solid black;
     background-color: #f9f9f9;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 48%;
-    max-width:48%;
-    justify-content: center;
+    width: 47%;
+    max-width: 47%;
+    justify-content: top;
     margin: 1%;
 
 }
@@ -60,10 +61,16 @@ body {
     margin-top: 20px;
     border-radius: 20px;
     width: 90%;
+    border: 1px solid black;
 }
-.card p,
-.card h2
- {
+
+.card h2 {
+    text-align: center;
+    padding: 10px;
+    height: 20px;
+}
+
+.card p {
     text-align: center;
     padding: 10px;
 }
@@ -79,7 +86,7 @@ h1 {
 }
 .hook {
     position: relative;
-    margin-top: 18%;
+    margin-top: 28vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,8 +96,8 @@ h1 {
     text-align: center;
     background-color: #f9f9f9;
     padding: 20px;
-    border: 10px solid #f9f9f9;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 #productsLink {
     padding: 8px;

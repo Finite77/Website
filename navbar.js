@@ -5,6 +5,7 @@ function moveButtonsToMenu() {
     let menuButton = document.createElement('button');
     menuButton.id = 'menuButton'
     menuButton.textContent = "Menu";
+    menuButton.style.width = '58vw';
     menuButton.addEventListener('click', () => {
         document.querySelector(".menu-container").classList.remove("hidden1");
     });

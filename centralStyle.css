@@ -36,7 +36,7 @@ button:active, a:active, input:active, select:active {
     left: 5%;
     width: 90%;
     height: 92vh;
-    background-color: white;
+    background-color: #f9f9f9;
     border-radius: 10px;
     border: 1px solid black;
     display: flex;
