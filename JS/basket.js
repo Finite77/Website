@@ -3,6 +3,7 @@ async function checkSignIn() {
     if(data.session) {
         console.log(data);
     } else {
-        window.location.href = 'login.html';
+        window.location.href = '../store/login.html';
     }
 }
+checkSignIn()

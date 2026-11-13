@@ -18,18 +18,15 @@ async function updateProductPage() {
     if(data.product_image4_path) {
         document.getElementById('fourthImage').src = data.product_image4_path;
     }
+
+    document.querySelector('.descriptionText').innerHTML = data.product_full_description;
     /* document.querySelector('.itemName').textContent = data.product_name;
     document.querySelector('.itemDescription').textContent = data.product_description;
     document.querySelector('.itemPrice').textContent = '£' + data.product_price; */
-    const paypalContainerId = `paypal-container-${data.item_paypal_id}`;
-    document.getElementById('paypalContainer').insertAdjacentHTML(
-        'beforeend',
-        `<div id="${paypalContainerId}"></div>`
-    );
-
-    const paypalScript = document.createElement('script');
-    paypalScript.textContent = `paypal.HostedButtons({ hostedButtonId: ${JSON.stringify(data.item_paypal_id)} }).render("#${paypalContainerId}")`;
-    document.body.appendChild(paypalScript);
+    const paypalContainer = document.createElement('div');
+    paypalContainer.id = `paypal-container-${data.item_paypal_id}`;
+    document.getElementById('paypalContainer').appendChild(paypalContainer);
+    paypal.HostedButtons({ hostedButtonId: data.item_paypal_id }).render(`#${paypalContainer.id}`);
     
     /* proof of concept if you can call it that */
     

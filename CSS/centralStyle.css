@@ -1,5 +1,5 @@
 body{
-    /* background-image:  url('./Imagees/Minimalist Geometric Wireframe Network-transparent(1).png'); */
+    /* background-image:  url('../Imagees/Minimalist Geometric Wireframe Network-transparent(1).png'); */
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -16,9 +16,11 @@ button, a, input, select {
     color: #222222;
     font: inherit;
     text-decoration: none;
+    transition-duration: 200ms;
 }
 
 button:hover, a:hover, input:hover, select:hover {
+    transition-duration: 200ms;
     transform: translateY(-2px);
     box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;

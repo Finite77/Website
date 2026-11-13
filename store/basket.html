@@ -1,20 +1,24 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <link rel="stylesheet" href="centralStyle.css">
+            <link rel="stylesheet" href="../CSS/centralStyle.css">
             <!-- Css stolen from the product page be like:-->
             
-            <link rel="stylesheet" href="basketStyle.css">
+            <link rel="stylesheet" href="../CSS/basketStyle.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
             <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-            <script defer src="supabase.js"></script>
-            <script src="basket.js"></script>
-            <script defer src="script.js"></script>
-            <script defer src="basketContents.js"></script>
-            <script defer src="navbar.js"></script>
+            <script defer src="../JS/supabase.js"></script>
+            <script defer src="../JS/basket.js"></script>
+            <script defer src="../JS/script.js"></script>
+            <script defer src="../JS/basketContents.js"></script>
+            <script defer src="../JS/navbar.js"></script>
+            <script defer src="../JS/checkout.js"></script>
+            <script async defer src="https://www.sandbox.paypal.com/web-sdk/v6/core" onload="window.onLoad()"></script>
+            <!-- <script src="../JS/paypal.js"></script> -->
+            
         </head>
         <body>
             <div class="hidden1 menu-container"></div>
@@ -23,11 +27,11 @@
                     <h1 id="pageTitle"><b>TIMICITY </b></h1>
                     <select id="ProductSelector" aria-label="Select a product">
                         <option value="" selected disabled>Our products</option>
-                        <option value="candyMachine.html">Candy Machines</option>
-                        <option value="VrMachine.html">VR Machines</option>
-                        <option value="massageMachine.html">Massage Machines</option>
+                        
+                        <option value="../store/VrMachine.html">VR Machines</option>
+                        <option value="../store/massageMachine.html">Massage Machines</option>
                     </select>
-                    <a id = 'aboutus'href="aboutUs.html">About Us</a>
+                    <a id = 'aboutus'href="../store/aboutUs.html">About Us</a>
                     <!-- <input id="searchBar" type="text" placeholder="⌕ Search..."> -->
                 </div>
                 <!-- <div class="div-in-navbar-2">    
@@ -43,7 +47,16 @@
                     </div>
                 </div>
                 <div id="rightOfPage">
-                    <div id="subtotalInfo"></div>
+                    <div id="subtotalInfo">
+                        <div class="pricesDisplay">
+                            <h2 id="subtotalText">Subtotal:</h2>
+                            <h2 id="subtotalPrice"></h2>
+                        </div>
+
+                    </div>
+                    <div id="paypalButtonContainer">
+
+                    </div>
                 </div>
             </div>
             

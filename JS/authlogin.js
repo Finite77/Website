@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('otherPage').addEventListener('click', () => {
-        window.location.href = 'signup.html'
+        window.location.href = '../store/signup.html'
     });
     document.getElementById('backHome').addEventListener('click', () => {
-        window.location.href = 'index.html'
+        window.location.href = '../store/index.html'
     });
     let username;
     let password;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('feedbackBox').textContent = 'Unable to log in. Please check your email and password and try again.'
         }
     } else if (data.session) {
-        window.location.href = 'productslanding.html';
+        window.location.href = '../store/productslanding.html';
         alert('You can now add items to your basket!');
     } else {
         document.getElementById('feedbackBox').textContent = 'Could not start a session. Please try again.'
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* if(data.session == null) {
         document.getElementById('feedbackBox').textContent = 'i h8 my life but nevertheless you already signed up before so go login'
         setTimeout(() => {
-            window.location.href = 'signup.html';
+            window.location.href = '../store/signup.html';
         }, 2000)
         
     } */

@@ -2,10 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('otherPage').addEventListener('click', () => {
-        window.location.href = 'login.html'
+        window.location.href = '../store/login.html'
     })
     document.getElementById('backHome').addEventListener('click', () => {
-        window.location.href = 'index.html'
+        window.location.href = '../store/index.html'
     });
     let username;
     let password;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
         password: password,
         options: {
-        emailRedirectTo: 'http://127.0.0.1:5500/dashboard.html',
+        emailRedirectTo: 'http://127.0.0.1:5500/store/productslanding.html',
         },  
     })
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(data.user) {
         document.getElementById('feedbackBox').textContent = 'i h8 my life but nevertheless you already signed up before so go login'
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = '../store/login.html';
         }, 4000)
         
     } else if(error) {

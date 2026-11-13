@@ -5,31 +5,31 @@ async function signOut() {
 async function checkloggedInAndDoStuff() {
     const {data, error} = await window.supabaseClient.auth.getSession();
     if(data.session) {
-        let dashboardButton = document.createElement('button')
-        dashboardButton.textContent = 'Basket';
-        dashboardButton.addEventListener('click', () => {
-            window.location.href = 'basket.html'
+        let basketButton = document.createElement('button')
+        basketButton.textContent = 'Basket';
+        basketButton.addEventListener('click', () => {
+            window.location.href = '../store/basket.html'
         })
-        document.querySelector('.div-in-navbar').appendChild(dashboardButton);
+        document.querySelector('.div-in-navbar').appendChild(basketButton);
 
         let logoutButton = document.createElement('button')
         logoutButton.textContent = 'Logout';
         logoutButton.addEventListener('click', async () => {
             await signOut();
-            window.location.href = 'index.html'
+            window.location.href = '../store/index.html'
         })
         document.querySelector('.div-in-navbar').appendChild(logoutButton);
     } else {
         let loginButton = document.createElement('button');
         loginButton.textContent = 'Login';
         loginButton.addEventListener('click', () => {
-            window.location.href = 'login.html';
+            window.location.href = '../store/login.html';
         });
         document.querySelector('.div-in-navbar').appendChild(loginButton);
         let signupButton = document.createElement('button');
         signupButton.textContent = 'Signup';
         signupButton.addEventListener('click', () => {
-            window.location.href = 'signup.html';
+            window.location.href = '../store/signup.html';
         });
         document.querySelector('.div-in-navbar').appendChild(signupButton);
     }

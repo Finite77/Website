@@ -83,7 +83,7 @@ async function checkLoginAndAllowAddToBasket() {
         if(!data.session) {
             document.getElementById('addToBasket').textContent = 'Login to add items to basket!'
             document.getElementById('addToBasket').addEventListener('click', () => {
-                window.location.href = 'login.html';
+                window.location.href = '../store/login.html';
             })
         } else {
             document.getElementById('addToBasket').addEventListener('click', async () => {

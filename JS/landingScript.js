@@ -20,7 +20,7 @@ document.getElementById('priceRange').addEventListener('input', () => {
     
 });
 document.getElementById('pageTitle').addEventListener('click', () => {
-    window.location.href = 'index.html';
+    window.location.href = '../store/index.html';
 });
 
 async function loadCheckboxes() {
@@ -102,7 +102,7 @@ async function loadProducts(selectors = selectedProducts) {
         productCont.appendChild(card);
         
         card.addEventListener('click', function () {
-            window.location.href = `product.html?id=${product.id}`;
+            window.location.href = `../store/product.html?id=${product.id}`;
         });
 
         card.addEventListener('keydown', function (a) {
@@ -143,4 +143,4 @@ async function loadProducts(selectors = selectedProducts) {
 loadProducts();
 loadCheckboxes();
 
- /* <div class='product'> <img src="./Imagees/blank.jpg" alt="Candy machine"> <h2>Candy Machine</h2> </div> */
+ /* <div class='product'> <img src="../Imagees/blank.jpg" alt="Candy machine"> <h2>Candy Machine</h2> </div> */

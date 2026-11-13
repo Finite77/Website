@@ -33,6 +33,28 @@ h1 {
     height: 100vh;
     flex-direction: row;
 }
+#paypalButtonContainer, #subtotalInfo {
+    width: 100%;
+    align-self: center;
+    background-color: #fefefe;
+    border: 1px solid black;
+    height: 200px;
+    margin: 12px 8px;
+    gap: 20px;
+    align-content: center;
+    text-align: center;
+
+
+}
+
+#paypalButton {
+    width: 90%;
+    margin-inline: 5%;
+}
+
+#payTitle {
+    margin-inline: 5%;
+}
 #BasketContainer {
     display: flex;
     flex-direction: row;
@@ -86,7 +108,7 @@ h1 {
     overflow: hidden;
     min-width: 50px;
     margin-top: 20px;
-    max-width: 100%;
+    width: 100%;
     padding: 8px 12px;
     color: black;
     text-align: center;
@@ -97,16 +119,29 @@ h1 {
 }
 
 #rightOfPage {
+    display: flex;
+    flex-direction: column;
     width: 30%;
+    border-left: 1px solid black;
+    background-color: #f9f9f9;
+    align-items: center;
+  
 }
 #titleHeader {
     width: 70%;
 }
 
-#subtotalInfo {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    border-left: 1px solid black;
+@media (max-width: 630px) {
+    .pageContent {
+        flex-direction: column;
+        height: fit-content;
+    }
+    
+    #rightOfPage {
+        width: 100%;
+    }
+
+    #leftOfPage {
+        width: 100%;
+    }
 }

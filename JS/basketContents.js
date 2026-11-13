@@ -1,9 +1,14 @@
 async function returnBasketContents() {
+    // Check if the user is authenticated.
     const { data: user, error: authError } = await window.supabaseClient.auth.getUser();
     if (authError) {
         console.error(authError)
         return;
     }
+    /* Query supabase for the user's basket. This function returns an array called productsDetails, containing a set of objects containing:
+        - Each product in the basket's id
+        - Each product's quantity.
+    */
     async function retrieveBasketContents() {
         const { data, error } = await window.supabaseClient
             .from('User Basket')
@@ -19,6 +24,14 @@ async function returnBasketContents() {
         })
         return productDetails;
     }
+    /*  This function takes the above function's return and:
+        - Generates a list of product ids
+        - Uses this to query supabase regarding the respective products 
+        (I used this setup because obviously the user basket and products list are in different tables)
+        - Creates a new array which loops over the array returned from the previous function and the array of products matching the products in the basket and:
+            - Pushes the product quantity and product details to the same array
+        -   This setup lets me associate the quantities with the details
+    */
 
     async function acquireBasket() {
         let productsDetails = await retrieveBasketContents();
@@ -48,9 +61,12 @@ async function displayBasket() {
     const data = await returnBasketContents();
     const { data: user, error: authError } = await window.supabaseClient.auth.getUser();
     console.log(data);
-    /*so data is an array, which contains arrays in the format [[quantity of item, item],[quantity of item, item(details]] etc */
+    /*so data is an array, which contains arrays in the format [[quantity of item, iatem],[quantity of item, item(details]] etc */
     if (data[0]?.length > 0) {
             document.getElementById('BasketContainer').innerHTML = '';
+            let subtotal = 0;
+            let itemscount = 0;
+            // Essentially renders the page if there is data in the basket.
         data.forEach((array) => {
             let productCard = document.createElement('div');
             productCard.classList.add('product');
@@ -81,12 +97,24 @@ async function displayBasket() {
             productPrice.textContent = '£' + array[1].product_price;
             section2.appendChild(productPrice);
 
+            subtotal += array[1].product_price;
+            document.getElementById('subtotalPrice').textContent = `£${subtotal.toFixed(2)}`;
+            
+
             let productQuantity = document.createElement('input');
             productQuantity.value = array[0];
             productQuantity.readOnly = true;
             productQuantity.tabIndex = -1;
             productQuantity.style.pointerEvents = "none";
             section3.appendChild(productQuantity);
+
+            itemscount += array[0];
+            if (itemscount === 1) {
+                document.getElementById('subtotalText').textContent = `Subtotal (${itemscount} item):`
+            } else if (itemscount > 1){
+                document.getElementById('subtotalText').textContent = `Subtotal (${itemscount} items):`
+            }
+            
             /* buttons (code of doom and despair) */
             let increaseButton = document.createElement('button');
             increaseButton.textContent = '+';
@@ -168,16 +196,16 @@ async function displayBasket() {
                 const {data, error} = await window.supabaseClient
                 .from('Products')
                 .select('product_stock')
-                .eq('id', item)
+                .eq('id', array[1].product_id)
                 .maybeSingle();
 
-                document.getElementById('numberToBasket').addEventListener('input', () => {
-                    if (document.getElementById('numberToBasket').value > data.product_stock) {
-                        document.getElementById('numberToBasket').value = 1 + data.product_stock;
-                        document.getElementById('numberToBasket').style.backgroundColor = 'red';
+                productQuantity.addEventListener('input', () => {
+                    if (productQuantity.value > data.product_stock) {
+                        productQuantity.value = 1 + data.product_stock;
+                        productQuantity.style.backgroundColor = 'red';
                         setTimeout(() => {
-                            document.getElementById('numberToBasket').style.backgroundColor = 'white';
-                            document.getElementById('numberToBasket').value = data.product_stock;
+                            productQuantity.style.backgroundColor = 'white';
+                            productQuantity.value = data.product_stock;
                         }, 200);
                     }
                 })
@@ -189,7 +217,7 @@ async function displayBasket() {
 
         })
     } else {
-        document.getElementById('BasketContainer').innerHTML = '<a href="productslanding.html"><h1>Your basket is empty....     Shop Now!</h1></a>';
+        document.getElementById('BasketContainer').innerHTML = '<a href="../store/productslanding.html"><h1>Your basket is empty....     Shop Now!</h1></a>';
     }
 }
 
