@@ -143,4 +143,4 @@ async function loadProducts(selectors = selectedProducts) {
 loadProducts();
 loadCheckboxes();
 
- /* <div class='product'> <img src="/Imagees/blank.jpg" alt="Candy machine"> <h2>Candy Machine</h2> </div> */
+ /* <div class='product'> <img src="/store/Imagees/blank.jpg" alt="Candy machine"> <h2>Candy Machine</h2> </div> */
