@@ -1,5 +1,6 @@
+const id = new URLSearchParams(window.location.search).get('id');
 async function updateProductPage() {
-    const id = new URLSearchParams(window.location.search).get('id')
+
     const {data , error} = await window.supabaseClient
     .from('Products')
     .select('*')
@@ -20,9 +21,8 @@ async function updateProductPage() {
     }
 
     document.querySelector('.descriptionText').innerHTML = data.product_full_description;
-    /* document.querySelector('.itemName').textContent = data.product_name;
-    document.querySelector('.itemDescription').textContent = data.product_description;
-    document.querySelector('.itemPrice').textContent = '£' + data.product_price; */
+    document.querySelector('#itemName').textContent = data.product_name;
+    document.querySelector('#itemPrice').textContent = '£' + data.product_price.toFixed(2);
     const paypalContainer = document.createElement('div');
     paypalContainer.id = `paypal-container-${data.item_paypal_id}`;
     document.getElementById('paypalContainer').appendChild(paypalContainer);
@@ -53,3 +53,4 @@ document.querySelectorAll('img').forEach(image => {
 document.addEventListener('DOMContentLoaded', () => {
     updateProductPage();
 });
+

@@ -19,20 +19,26 @@ async function createOrder() {
 }
 
 async function onApprove(data) {
-  const { orderId } = data;
-  const response = await fetch(`/api/orders/${orderId}/capture`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  const orderData = await response.json();
+  const { data: orderData, error } = await window.supabaseClient.functions.invoke('capture-paypal-order',
+    {
+      body: {
+          paypalOrderId: data.orderID
+      }
+    }
+  );
+  if(error) {
+    throw error;
+  }
+  console.log('Capture result:', orderData);
   return orderData;
 }
 
 function onCancel(data) {
   document.getElementById("resultMessage").innerHTML =
-    `<p style="color: orange;">Payment cancelled</p>`;
+    `<h2 id='paymentStatus'>PAYMENT CANCELLED</h2>`;
+  setTimeout(() => {
+    document.getElementById("resultMessage").innerHTML = '';
+  }, 3000)
 }
 
 function onError(err) {

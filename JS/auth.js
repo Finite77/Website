@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (error.code === 'validation_failed') {
             document.getElementById('feedbackBox').textContent = 'Invalid email/ password! Try again.'
         } else if ((error.message) && error.message === 'Error sending confirmation email') {
+            console.error(error);
             document.getElementById('feedbackBox').textContent = 'Error sending confirmation email. Please check your email address and try again.'
             document.getElementById('emailInput').style.borderColor = 'red';
         } else {

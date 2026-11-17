@@ -144,15 +144,37 @@ body {
     top: 20px;
     left: 20px;
 }
-
-#paypalContainer, #cartButtons {
+/* should fix with classes in future */
+#paypalButtonContainer, #cartButtons, #priceAndNameContainer {
     width: 93%;
     padding: 12px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: white;
 }
+#paypalButtonContainer, #priceAndNameContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+#priceAndNameContainer {
+    gap: 16px;
+}
+#priceAndNameContainer h2 {
+    width: 95%;
+    border: 1px solid black;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 0px;
+    text-align: center;
 
+}
+/**/
+#paypalButton{
+    width: 98%;
+}
 #numberToBasket, #addToBasket {
     box-sizing: border-box;
     width: 100%;

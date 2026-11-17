@@ -11,15 +11,18 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-            <script defer src="https://cdn.auth0.com/js/auth0-spa-js/2.28/auth0-spa-js.production.js"></script>
             <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-            <script defer src="https://www.paypal.com/sdk/js?client-id=BAACZYxHipQFmX3UKGobhYurLS3AwRaNlavzVWrh_xxRBaOhDPTaRLnDRqxFLk0PXa-wkEIzR0SYsX5nng&amp;components=hosted-buttons&amp;disable-funding=venmo&amp;currency=GBP"></script>
             <script defer src="../JS/supabase.js"></script>
             <script defer src="../JS/checkLogin.js"></script>
             <script defer src="../JS/navbar.js"></script>
             <script defer src="../JS/script.js"></script>
             <script defer src="../JS/productUpdater.js"></script>
+            <script defer src="../JS/checkoutOnProductPage.js"></script>
+
             <script defer src="../JS/addToBasket.js"> </script>
+            <script async defer src="https://www.sandbox.paypal.com/web-sdk/v6/core" onload="window.onLoad2()"></script>
+            
+
             
         </head>
         <body>
@@ -50,13 +53,21 @@
                 <img id='fourthImage' src="../Imagees/blank.jpg" alt="Candy machine placeholder view 3">
             </div>
             <div id="itemDescriptionAddCart">
+                <h1 class="paymentLabel">Product...</h1>
+                    <div id="priceAndNameContainer">
+                        <h2 id="itemName"></h2>
+                        <h2 id="itemPrice"></h2>
+                    </div>
                 <h1 class="paymentLabel">Pay with paypal:</h1>
-                <div id = paypalContainer></div>
+                    <div id="paypalButtonContainer">
+                        <div id="resultMessage" style = "order: 3;"></div>
+                    </div>
+
                 <h1 class="paymentLabel">or add to cart:</h1>
-                <div id="cartButtons">
-                <input id="numberToBasket" type="number" min="1" max="10" value="1">
-                <button id="addToBasket">Add To Cart</button>
-                </div>
+                    <div id="cartButtons">
+                    <input id="numberToBasket" type="number" min="1" max="10" value="1">
+                    <button id="addToBasket">Add To Cart</button>
+                    </div>
                 
                  <!-- <h2 class="itemName"></h2>
                 <p class="itemDescription"></p>
