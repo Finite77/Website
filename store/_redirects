@@ -1,0 +1,19 @@
+/index.html / 301
+/login.html /login 301
+/signup.html /signup 301
+/basket.html /basket 301
+/product.html /product 301
+/productslanding.html /productslanding 301
+/VrMachine.html /VrMachine 301
+/candyMachine.html /candyMachine 301
+/massageMachine.html /massageMachine 301
+
+/ /index.html 200
+/login /login.html 200
+/signup /signup.html 200
+/basket /basket.html 200
+/product /product.html 200
+/productslanding /productslanding.html 200
+/VrMachine /VrMachine.html 200
+/candyMachine /candyMachine.html 200
+/massageMachine /massageMachine.html 200
