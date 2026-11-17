@@ -9,7 +9,7 @@ body {
 
 .mainPage {
     position: relative;
-    background-image: url("../Imagees/blank.jpg");
+    background-image: url("/Imagees/blank.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;

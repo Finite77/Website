@@ -8,7 +8,7 @@ async function checkloggedInAndDoStuff() {
         let basketButton = document.createElement('button')
         basketButton.textContent = 'Basket';
         basketButton.addEventListener('click', () => {
-            window.location.href = '../store/basket.html'
+            window.location.href = '/store/basket.html'
         })
         document.querySelector('.div-in-navbar').appendChild(basketButton);
 
@@ -16,20 +16,20 @@ async function checkloggedInAndDoStuff() {
         logoutButton.textContent = 'Logout';
         logoutButton.addEventListener('click', async () => {
             await signOut();
-            window.location.href = '../store/index.html'
+            window.location.href = '/store/index.html'
         })
         document.querySelector('.div-in-navbar').appendChild(logoutButton);
     } else {
         let loginButton = document.createElement('button');
         loginButton.textContent = 'Login';
         loginButton.addEventListener('click', () => {
-            window.location.href = '../store/login.html';
+            window.location.href = '/store/login.html';
         });
         document.querySelector('.div-in-navbar').appendChild(loginButton);
         let signupButton = document.createElement('button');
         signupButton.textContent = 'Signup';
         signupButton.addEventListener('click', () => {
-            window.location.href = '../store/signup.html';
+            window.location.href = '/store/signup.html';
         });
         document.querySelector('.div-in-navbar').appendChild(signupButton);
     }
